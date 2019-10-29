@@ -8,8 +8,6 @@ using Utility;
 
 namespace WindowsApplication
 {
-
-
     /// <summary>
     /// given:TO BE MODIFIED
     /// this class is used to capture data to be passed
@@ -20,6 +18,5 @@ namespace WindowsApplication
         public BITCollege_BC.Models.Student Student { get; set; }
 
         public BITCollege_BC.Models.Registration Registration { get; set; }
-
     }
 }

@@ -137,6 +137,26 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.AuditCourse.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.BITCollege_BCContext.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.Course.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.GPAState.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.GradedCourse.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.HonoursState.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.MasteryCourse.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.NextAuditCourse.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.NextGradedCourse.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.NextMasteryCourse.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.NextRegistrationNumber.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.NextStudentNumber.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.ProbationState.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.Program.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.Registration.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.RegularState.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.StoredProcedures.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.Student.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.StudentCard.datasource" />
+    <None Include="Properties\DataSources\BITCollege_BC.Models.SuspendedState.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

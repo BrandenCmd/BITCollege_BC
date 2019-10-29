@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BITCollege_BC.Models;
+using Utility;
 
 namespace WindowsApplication
 {
@@ -17,6 +19,8 @@ namespace WindowsApplication
         ///These variables will be used to store the current
         ///Student and selected Registration
         ConstructorData constructorData = new ConstructorData();
+
+        BITCollege_BC.Models.BITCollege_BCContext db = new BITCollege_BC.Models.BITCollege_BCContext();
 
         public frmStudent()
         {
@@ -77,6 +81,75 @@ namespace WindowsApplication
         {
             //keeps location of form static when opened and closed
             this.Location = new Point(0, 0);
+        }
+
+        private void registrationNumberComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void creditHoursLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void studentNumberMaskedTextBox_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                //Ensure the user has completed the requirements for the Mask
+                //long studentNumber = long.Parse(this.studentNumberMaskedTextBox.Text);
+
+                //Set the DataSource Property of the BindingSource object representing the Student controls to a
+                //LINQ-to-SQL Server query selecting data from the Students Entity Class whose StudentNumber
+                //matches the value in the MaskedTextBox
+
+                /*Student student =
+                   (from x in db.Students
+                    where x.StudentNumber == studentNumber
+                    select x).SingleOrDefault();*/
+
+                if (student == null)
+                {
+                    MessageBox.Show("Student Number does not exist", "Invalid Student Number", MessageBoxButtons.OK);
+
+                    this.lnkUpdate.Enabled = false;
+                    this.lnkDetails.Enabled = false;
+
+                    this.studentNumberMaskedTextBox.Focus();
+
+                    //Clear each BindingSource object on the form
+
+                }
+                else
+                {
+                    //Set the DataSource property of the BindingSource object representing the Registration controls
+                    //to a LINQ-to-SQL Server query selecting all Registrations whose StudentId corresponds to the
+                    //record represented by the StudentNumber value in the MaskedTextBox
+
+
+                    if (this.constructorData.Registration == null)
+                    {
+                        this.lnkUpdate.Enabled = false;
+                        this.lnkDetails.Enabled = false;
+
+                        //Clear each BindingSource object on the form
+                    }
+                    else
+                    {
+                        this.lnkUpdate.Enabled = true;
+                        this.lnkDetails.Enabled = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK);
+
+                this.lnkUpdate.Enabled = false;
+                this.lnkDetails.Enabled = false;
+            }
         }
     }
 }
